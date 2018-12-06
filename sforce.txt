@@ -1,0 +1,14 @@
+public class ChangePassword 
+{
+    public changepassword()
+    {
+        List<User> userList = new List<User>();
+        userList = [SELECT Id from User WHERE IsActive = true ];
+        
+		for(User u : userList)
+                {
+                      System.setPassword(u.Id, 'hello123');
+                      System.debug('DONE: ' + u.Id);
+                }
+    }
+}
