@@ -1,0 +1,34 @@
+<apex:page controller="Employee">
+    <apex:sectionHeader title="Wrapper Class"  />
+    <apex:form >
+    	<apex:pageBlock id="me" mode="mainDetail">
+        
+            <apex:pageBlocksection >
+                
+                <apex:inputText label="Name" 	value="{!empwrap.name}" />
+                <apex:inputText label="Spouse" 	value="{!empwrap.wife}" />
+                <apex:inputText label="City" 	value="{!empwrap.city}" />
+                <apex:inputText label="State" 	value="{!empwrap.state}" />
+                <apex:inputText label="Zip" 	value="{!empwrap.zip}" />
+                <apex:commandButton value="Save" action="{!Save}" reRender="me" />
+            
+            
+            </apex:pageBlocksection>
+            
+            <apex:pageBlocksection columns="1" rendered="{!emp.size>0}">
+                
+                <apex:pageBlockTable value="{!emp}" var="a" >
+                    
+                     <apex:column headerValue="Name" value="{!a.name}" />
+                     <apex:column headerValue="Spouse" value="{!a.wife}" />
+                     <apex:column headerValue="City" value="{!a.city}" />
+                     <apex:column headerValue="State" value="{!a.state}" />
+                     <apex:column headerValue="Zip" value="{!a.zip}" />
+                
+                </apex:pageBlockTable>
+                
+            </apex:pageBlocksection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

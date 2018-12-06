@@ -1,0 +1,26 @@
+<apex:page controller="Map_Exampl">
+    <style>
+    .dropdown{width:300px;text-transform: capitalize;}
+    </style>
+    <apex:form >
+        <apex:sectionHeader title="Map Example" subtitle="What A Map"/>
+        
+        <apex:pageBlock id="myself">
+        {!selecteditem}
+        <apex:pageBlockSection collapsible="false" title="Map...." columns="1">
+            
+            <apex:selectList size="1" styleClass="dropdown" value="{!selecteditem}">
+                <apex:selectOptions value="{!listup}"></apex:selectOptions>
+                <apex:actionSupport action="{!getval}" event="onchange" reRender="myself" />
+            </apex:selectList>
+            
+            <apex:selectList styleClass="dropdown" size="1">
+                <apex:selectOptions value="{!listdown}"></apex:selectOptions>
+            </apex:selectList>
+            
+        </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

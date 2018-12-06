@@ -1,0 +1,10 @@
+<apex:page controller="SelectOption_List">
+    <apex:form >
+      <apex:sectionHeader title="Apex to vfpage list" subtitle="List Option" />
+        
+            <apex:selectList size="1">
+            <apex:selectOptions value="{!options}"></apex:selectOptions>
+            </apex:selectList>
+        
+    </apex:form>
+</apex:page>

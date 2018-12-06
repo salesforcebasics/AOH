@@ -1,0 +1,36 @@
+<apex:page >
+    <apex:sectionHeader title="Prayuta Technology" subtitle="Product Development Company" help="http://www.prayuta.com"/>
+    <apex:form >
+        <apex:pageBlock title="Employee Save Registration">
+            
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Submit" />
+                <apex:commandButton value="Cancel" />
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="EmployeeInfo" collapsible="false" columns="2">
+                
+                <apex:inputText label="Employee Name"/>
+                <apex:inputText label="Email"/>
+                <apex:selectList size="1" label="Qualification" >                  
+                    <apex:selectOption itemLabel="-None-" itemValue="none" />
+                    <apex:selectOption itemLabel="MBA" itemValue="MBA" />
+                    <apex:selectOption itemLabel="MCA" itemValue="MCA" />
+                </apex:selectList>
+                
+                 <apex:selectCheckboxes label="Like" >                  
+                    <apex:selectOption itemLabel="Cricket" itemValue="cricket" />
+                    <apex:selectOption itemLabel="Hocky" itemValue="hocky" />
+                    <apex:selectOption itemLabel="Football" itemValue="football" />
+                </apex:selectCheckboxes>
+                
+                <apex:selectRadio label="Gender" >                  
+                    <apex:selectOption itemLabel="Male" itemValue="male" />
+                    <apex:selectOption itemLabel="Female" itemValue="female" />
+                </apex:selectRadio>
+            
+            </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

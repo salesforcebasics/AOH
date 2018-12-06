@@ -1,0 +1,49 @@
+<apex:page >
+    <apex:sectionHeader title="Student Registration" subtitle="Prayuta Techno School" help="http://www.prayuta.com" />
+    
+    <apex:form >
+    
+        <apex:pageBlock >
+               <apex:pageBlockButtons location="top">
+                   <apex:commandButton value="Save"/>
+                   <apex:commandButton value="Cancel"/>
+               </apex:pageBlockButtons> 
+			   <apex:pageBlockSection columns="4" title="Student Information" collapsible="false">
+               <apex:outputLabel value="Please Enter your Name"/>
+               <apex:inputText />
+               <apex:outputLabel value="Enter your Email"/>
+               <apex:inputText /> 
+               <apex:outputLabel value="Enter your Mobile Number"/>
+               <apex:inputText />
+               <apex:outputLabel value="Enter your Qualification"/>
+               <apex:selectList size="1">
+               <apex:selectOption itemLabel="-None-" itemValue="none"></apex:selectOption>
+               <apex:selectOption itemLabel="MBA" itemValue="mba"></apex:selectOption>
+               <apex:selectOption itemLabel="MCA" itemValue="mca"></apex:selectOption>
+               </apex:selectList>
+               <apex:outputLabel value="Gender"/>
+               <apex:selectRadio >
+               <apex:selectOption itemLabel="Male" itemValue="male"></apex:selectOption>
+               <apex:selectOption itemLabel="Female" itemValue="female"></apex:selectOption>
+               <apex:selectOption itemLabel="Other" itemValue="other"></apex:selectOption> 
+               </apex:selectRadio>
+               <apex:outputLabel value="Interested On"/>
+               <apex:selectCheckboxes >
+               <apex:selectOption itemLabel="Football" itemValue="football"></apex:selectOption>
+               <apex:selectOption itemLabel="Cricket" itemValue="cricket"></apex:selectOption>
+               <apex:selectOption itemLabel="Hockey" itemValue="hockey"></apex:selectOption>     
+               </apex:selectCheckboxes> 
+                   
+               <apex:outputLabel value="About Your Self"/>
+               <apex:inputTextarea cols="35" rows="5"  />   
+                   
+                   
+                   
+               </apex:pageBlockSection>               
+             
+        </apex:pageBlock>
+        
+    
+    </apex:form>
+    
+</apex:page>

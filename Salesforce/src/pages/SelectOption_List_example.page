@@ -1,0 +1,7 @@
+<apex:page controller="SelectOption_List_example">
+    <apex:form >
+    <apex:selectList size="1">
+    <apex:selectOptions value="{!citynames}"></apex:selectOptions>
+    </apex:selectList>
+    </apex:form>
+</apex:page>

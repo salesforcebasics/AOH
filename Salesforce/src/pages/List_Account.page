@@ -1,0 +1,30 @@
+<apex:page controller="List_Account">
+    
+    <apex:form >
+    	<apex:sectionHeader title="Account_List" />
+    	<apex:pageBlock title="Save Records"  >
+        
+            	<apex:pageBlockButtons location="top" >
+            		<apex:commandButton action="{!add}" value="Save" />
+                </apex:pageBlockButtons>
+            
+            	<apex:pageBlockSection >
+            		<apex:inputField value="{!acc.name}" />
+                    <apex:inputField value="{!acc.industry}" />
+                    <apex:inputField value="{!acc.phone}" />
+                    <apex:inputField value="{!acc.rating}" />
+                </apex:pageBlockSection>
+            
+            		<apex:pageBlockSection columns="1" collapsible="false" >
+                    <apex:pageBlockTable value="{!accounts}" var="a" >
+            		<apex:column value="{!a.name}" />
+                    <apex:column value="{!a.industry}" />
+                    <apex:column value="{!a.phone}" />
+                    <apex:column value="{!a.rating}" /></apex:pageBlockTable>   
+                	</apex:pageBlockSection>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+    
+</apex:page>

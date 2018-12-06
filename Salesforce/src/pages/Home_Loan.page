@@ -1,0 +1,3 @@
+<apex:page controller="Pagereference_Example2" >
+    {!name}  {!loantype}
+</apex:page>

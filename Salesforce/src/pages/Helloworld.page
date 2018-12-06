@@ -1,0 +1,11 @@
+<!--
+contentType="vnd.msword#chandra.doc"
+rendered="false"
+renderAs="PDF"
+setup="false"
+-->
+<apex:page showHeader="true" sidebar="true" apiVersion="43.0"   >
+
+    <apex:sectionHeader title="Prayuta Technology" subtitle="Product Dev Company" help="http://www.prayuta.com" description="We are at hyderabad location"/>
+    
+</apex:page>

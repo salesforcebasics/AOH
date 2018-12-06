@@ -1,0 +1,20 @@
+<apex:page controller="Pagereference_Example2" >
+    <apex:form >
+        <apex:sectionHeader title="Loan Section" subtitle="Global Loan" help="/apex/help"/>
+        <apex:pageBlock id="me" >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" />
+                <apex:commandButton value="Cancel" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputText value="{!name}" label="Person Name" />
+                <apex:selectList size="1" value="{!loantype}"    >
+                    <apex:selectOption itemLabel="-None-" itemValue="none" />
+                    <apex:selectOption itemLabel="Personal" itemValue="personal" />
+                    <apex:selectOption itemLabel="Home" itemValue="home" />
+                    <apex:actionSupport action="{!Callme}" event="onchange"  />
+                </apex:selectList>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

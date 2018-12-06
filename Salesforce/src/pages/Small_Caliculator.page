@@ -1,0 +1,45 @@
+<apex:page controller="Small_Caliculator">
+    
+    <apex:form id="sult">
+       <apex:pageMessages />
+        <apex:sectionHeader title="Simple Caliculator" subtitle="AlertCalc" />
+        
+        <apex:pageBlock >
+        	
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Addition" action="{!Calc}"  reRender="sult" />
+                    <apex:commandButton value="Multiple" action="{!Multi}" reRender="sult" />
+                </apex:pageBlockButtons>
+                
+             <apex:pageBlockSection title="This is My Caliculator" collapsible="false">   
+                 
+                 <apex:inputText value="{!empname}"  label="Your Name Please" />
+                 <apex:inputText value="{!working_daya}"  label="value A" />
+                 <apex:inputText value="{!day_sal}"  label="value B" />
+                 <apex:inputText value="{!totel_sal}"  label="Resulet" />
+                
+            
+            </apex:pageBlockSection>
+            
+            
+        </apex:pageBlock>
+        
+        
+        <apex:pageBlock rendered="{!!ISBLANK(working_daya)}">
+        	
+            <apex:pageMessages />
+                
+             <apex:pageBlockSection title="{!empname}" collapsible="false">  
+               
+               
+               A Value  :  {!working_daya} 
+               B Value  : {!day_sal}
+               Result   : {!totel_sal}
+            </apex:pageBlockSection>
+            
+            
+        </apex:pageBlock>
+      
+    </apex:form>
+        
+</apex:page>

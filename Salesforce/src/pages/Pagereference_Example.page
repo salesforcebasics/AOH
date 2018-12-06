@@ -1,0 +1,5 @@
+<apex:page controller="Pagereference_Example" >
+    <apex:form >
+        <apex:commandButton value="Walk" action="{!CallMe}" />
+    </apex:form>
+</apex:page>

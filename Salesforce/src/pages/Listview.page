@@ -1,0 +1,23 @@
+<apex:page standardController="Account" recordSetVar="items" >
+    <apex:form >
+    
+        <apex:selectList size="1" value="{!filterid}">
+            <apex:selectOptions value="{!listviewOptions}" />
+            <apex:actionSupport event="onchange" reRender="reload" />
+        </apex:selectList>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <apex:pageBlock id="reload" >
+        
+            <apex:pageBlockTable value="{!items}" var="acc" first="3" rows="2">
+                
+                <apex:column value="{!acc.name}"/>
+                <apex:column value="{!acc.phone}"/>
+                <apex:column value="{!acc.rating}"/>
+                <apex:column value="{!acc.industry}"/>
+            
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    {!filterid}
+    </apex:form>
+</apex:page>

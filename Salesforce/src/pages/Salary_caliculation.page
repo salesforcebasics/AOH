@@ -1,0 +1,47 @@
+<apex:page controller="Salary_caliculation">
+    
+    <apex:sectionHeader title="Employee Information" subtitle="Prayuta Technology PLtd.." help="http://www.prayuta.com" />
+    
+    <apex:form id="inval">
+    	<apex:pageBlock title="Employee Information" >
+            
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Save" action="{!calc}"  reRender="output" />
+                    <apex:commandButton value="Reset" action="{!reset}"  reRender="inval" />
+                </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection >
+               
+                
+                <apex:inputText label="Name" value="{!name}"  />
+                <apex:inputText label="Father Name"  />
+                <apex:selectList size="1" label="Qualification" style="width:175px;">
+                    <apex:selectOption itemLabel="None" itemValue="-none-" />
+                    <apex:selectOption itemLabel="MBA" itemValue="mba" />
+                    <apex:selectOption itemLabel="MCA" itemValue="mca" />
+                </apex:selectList>
+                
+                <apex:inputCheckbox label="Gender">
+                    <apex:selectOption itemLabel="Male" itemValue="male" />
+                    <apex:selectOption itemLabel="Female" itemValue="female" />
+                    <apex:selectOption itemLabel="Other" itemValue="other" />
+                </apex:inputCheckbox>
+                <apex:inputTextarea label="About Your Self" cols="45" rows="5" />
+                 <apex:inputText label="Are you Married ?" />
+                <apex:inputText label="Daily Salary"  value="{!dsal}"/>
+                <apex:inputText label="No of Days Working"  value="{!tdays}" />
+            </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+        
+        <apex:pageBlock id="output" title="Caliculation"><apex:pageMessages />
+            
+            
+            <apex:outputLabel value="{!salary}"/>
+            <apex:outputLabel value="{!name}"/>
+        
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+</apex:page>

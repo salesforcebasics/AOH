@@ -1,0 +1,32 @@
+<apex:page controller="Map_Example2">
+    <style>
+    .leri{width:200px;}
+    </style>
+    <apex:form >
+    	<apex:sectionHeader title="Left & Right"/>
+        
+        <apex:pageBlock id="myself">
+            
+            
+            
+            <apex:panelGrid columns="5">
+                <apex:selectList value="{!leftselected}" multiselect="true" styleClass="leri">
+                    <apex:selectOptions value="{!leftval}"></apex:selectOptions>
+                </apex:selectList>
+                
+                <apex:commandButton action="{!itemsadd}" value="LeftItems" reRender="myself" />
+                <apex:commandButton action="{!itemsremove}" value="RightItems" reRender="myself" />
+                
+                <apex:selectList value="{!rightselected}" multiselect="true" styleClass="leri">
+                    <apex:selectOptions value="{!righval}"></apex:selectOptions>
+                </apex:selectList>
+                
+            </apex:panelGrid>
+            
+            
+            
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

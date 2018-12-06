@@ -1,0 +1,11 @@
+<apex:page >
+   <apex:form >
+     <apex:sectionHeader title="Image" subtitle="My Image"  />    
+     <apex:image url="{!$Resource.alertinfo}" style="width:120px;" />
+       <!--  {!$user.firstName}
+     {!$user.lastName} 
+     {!$user.email}
+     {!$user.ID} -->
+       {!$Site.name} 
+    </apex:form>
+</apex:page>
